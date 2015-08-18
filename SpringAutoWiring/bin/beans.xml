@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+	   					   
+	   					   
+<bean id="square1" class="com.differentshape.Square">
+	<!-- <constructor-arg name="shape" value="Square First" />
+	<property name="squareDimensions" ref="squareDimensions1" />
+	<property name="height" value="17"/>
+	<property name="width" value="18"/> -->
+</bean>
+<bean id="squareDimensions1" class="com.differentshape.SquareDimensions">
+	<property name="height" value="25"/>
+	<property name="width" value="30"/>
+</bean>
+
+
+ <!-- <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+
+<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+ --> 
+
+
+
+
+
+
+
+
+					   
+<bean id="triangle" class="com.differentshape.Triangle">
+		
+</bean>
+
+<bean name="tc" class="com.differentshape.TriangleCoordinates">
+<property name="x" value="0"/>
+<property name="y" value="0"/>
+</bean>
+</beans>   					   

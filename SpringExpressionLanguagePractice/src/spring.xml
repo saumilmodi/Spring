@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-2.5.xsd"
+       xmlns:context="http://www.springframework.org/schema/context">
+       
+       <bean id="CustomerListFatch1" class="com.online.bean.CustomerListFatch">
+       		<property name="customerId" value="#{T(java.lang.Math).PI}"/>
+       		<property name="customerName" value="#{cl.customerList.![name]}"/>
+       		<property name="customerListFactch" value="#{cl.customerList.?[salary>75000]}"/>
+       		<property name="name" value="#{emp1.getName().toUpperCase()}"/>
+       		
+       </bean>
+       <bean id="cl" class="com.online.bean.CustomerList"/>
+       <bean id="emp1" class="com.online.bean.Employee">
+       	<property name="id" value="1"/>
+       	<property name="name" value="shailesh"/>
+       </bean>
+</beans>

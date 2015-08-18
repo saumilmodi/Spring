@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+		<bean id="triangle" class="com.online.bean.Triangle" name="triangleAlias">
+			<property name="a" ref="PointA"/>
+			<property name="b" >
+					<!-- Example for Innerbean -->
+					<bean class="com.online.bean.Point">
+						<property name="x" value="-10"/>
+						<property name="y" value="0"/>
+					</bean>
+			</property>
+			
+			<property name="c" ref="PointC"/>
+		 
+		</bean>
+		
+		
+		
+		<bean id="PointA" class="com.online.bean.Point">
+			<property name="x" value="0"/>
+			<property name="y" value="0"/>
+		</bean>
+
+		
+		<bean id="PointC" class="com.online.bean.Point">
+			<property name="x" value="0"/>
+			<property name="y" value="10"/>
+		</bean>
+				
+
+</beans>

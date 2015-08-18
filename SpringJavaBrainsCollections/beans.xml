@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	   					   
+<bean id="Square1" class="com.online.bean.Square" >
+	<property name="points">
+		<list>
+		<ref bean="firstPoint"/>
+		<ref bean="secondPoint"/>
+		<ref bean="thirdPoint"/>
+		<ref bean="fourthPoint"/>
+		</list>
+	
+	</property>
+</bean>		
+<bean id="SquareSet" class="com.online.bean.Square">
+	<property name="printsSet">
+		<set>
+			<ref bean="firstPointSet"/>
+			<ref bean="secondPointSet"/>
+			<ref bean="thirdPointSet"/>
+			<ref bean="fourthPointSet"/>
+			
+		</set>
+	</property>
+</bean>
+
+
+<bean id="firstPointSet" class="com.online.bean.Points">
+	<property name="x" value="0"/>
+	<property name="y" value="0"/>
+</bean>
+
+<bean id="secondPointSet" class="com.online.bean.Points">
+	<property name="x" value="0"/>
+	<property name="y" value="20"/>
+</bean>
+
+<bean id="thirdPointSet" class="com.online.bean.Points">
+	<property name="x" value="20"/>
+	<property name="y" value="0"/>
+</bean>
+
+<bean id="fourthPointSet" class="com.online.bean.Points">
+	<property name="x" value="20"/>
+	<property name="y" value="20"/>
+</bean>
+
+	
+
+<bean id="firstPoint" class="com.online.bean.Points">
+	<property name="x" value="0"/>
+	<property name="y" value="0"/>
+</bean>
+
+<bean id="secondPoint" class="com.online.bean.Points">
+	<property name="x" value="0"/>
+	<property name="y" value="20"/>
+</bean>
+
+<bean id="thirdPoint" class="com.online.bean.Points">
+	<property name="x" value="20"/>
+	<property name="y" value="0"/>
+</bean>
+
+<bean id="fourthPoint" class="com.online.bean.Points">
+	<property name="x" value="20"/>
+	<property name="y" value="20"/>
+</bean>
+	   				
+	   				
+</beans>
